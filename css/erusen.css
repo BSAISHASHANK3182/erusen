@@ -3,20 +3,6 @@ html, body {
 	margin: 0;
 	padding: 0;
 }
-a.white-btn {
-	border: 1px solid #fff;
-	border-radius: 3px;
-	color: #fff;
-	display: block;
-	font-size: 0.85em;
-	margin-top: 1.25em;
-	padding: 0.625em 1.25em;
-	transition: all 0.20s linear 0s;
-	-o-transition: all 0.20s linear 0s;
-	-ms-transition: all 0.20s linear 0s;
-	-moz-transition: all 0.20s linear 0s;
-	-webkit-transition: all 0.20s linear 0s;
-}
 a.white-btn:hover {
 	background: none repeat scroll 0 0 rgba(255, 255, 255, 0.1);
 }
@@ -38,31 +24,6 @@ a.color-btn:hover, form.customform button.color-btn:hover {
 	border: 1px solid #92c500;
 	color: #92c500;
 }
-#topbar {
-	background: none repeat scroll 0 0 #012232;
-	border-bottom: 1px solid #001925;
-	padding: 0.3125em 0;
-}
-#topbar p {
-	color: #fff;
-	font-size: 0.75em;
-	opacity: 0.5;
-	position: relative;
-	top: 2px;
-}
-#topbar p strong {
-	font-weight: 600;
-}
-#topbar i {
-	color: #ffffff;
-	font-size: 1.1em;
-	opacity: 0.5;
-	transition: all 0.20s linear 0s;
-	-o-transition: all 0.20s linear 0s;
-	-ms-transition: all 0.20s linear 0s;
-	-moz-transition: all 0.20s linear 0s;
-	-webkit-transition: all 0.20s linear 0s;
-}
 #topbar i:hover {
 	color: #92c500;
 	cursor: pointer;
@@ -79,14 +40,12 @@ header {
 }
 .logo {
 	position: relative;
-	left: -80%;
 }
 p.logo {
 	color: #fff;
-	font-size: 2.5em;
+	font-size: 2.5vmax;
 	font-weight: 300;
 	text-transform: uppercase;
-	top: 0.625em;
 	float: left;
 }
 .top-nav {
@@ -97,7 +56,7 @@ p.logo {
 	color: #fff;
 	font-size: 1.6em;
 	font-weight: 600;
-	padding: 2.1em 1.5em 2.5em;
+	padding: 2.1vmin 1.5vmin 2.5vmin;
 	text-transform: uppercase;
 	transition: all 0.20s linear 0s;
 	-o-transition: all 0.20s linear 0s;
@@ -113,6 +72,9 @@ p.logo {
 }
 #carousel {
 	height: 100vh;
+	display: block;
+	background: none repeat scroll 0 0 rgba(146, 197, 0, 1);
+	font-size: 1.25vmin;
 }
 #carousel .text {
 	position: absolute;
@@ -123,6 +85,10 @@ p.logo {
 .item {
 	overflow: hidden;
 	width: 100%;
+}
+.item img {
+	min-height: 100%;
+	height: 95vh;
 }
 .pointbox {
 	line-height: 50px;
@@ -167,21 +133,25 @@ p.logo {
 .owl-theme .owl-controls .owl-page span {
 	background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
 	border: 3px solid rgba(0, 40, 58, 0.57);
-	height: 18px;
+	height: 2em;
 	margin: 0.3125em;
 	opacity: 1;
-	width: 18px;
+	width: 2em;
 }
 .owl-theme .owl-controls .owl-page.active span, .owl-theme .owl-controls.clickable .owl-page:hover span {
 	background: none repeat scroll 0 0 #92c500;
 }
 #open-innovation {
+	position: relative;
+	display: block;
+	height: 100vh;
 	background: #6f9600 none repeat scroll 0 0;
-	box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
 	padding: 6em 2em;
+	font-size: 1.75vmin;
 }
 #open-innovation h2 {
 	color: #fff;
+	font-size: 2em
 }
 #open-innovation h1 {
 	color: #fff;
@@ -192,16 +162,16 @@ p.logo {
 }
 #open-innovation i {
 	background: none repeat scroll 0 0 #fff;
-	border-radius: 100px;
+	border-radius: 3.5em;
 	color: #6f9600;
 	display: block;
 	float: left;
 	font-size: 2em;
-	height: 100px;
-	line-height: 100px;
+	height: 3.5em;
+	line-height: 3.5em;
 	margin-right: 0.625em;
 	text-align: center;
-	width: 100px;
+	width: 3.5em;
 }
 .cite {
 	color: #fff;
@@ -227,7 +197,7 @@ p.logo {
 	padding: 0;
 }
 .half-tile img {
-	height: 100%;
+	width: 100%;
 }
 .half-tile-right {
 	display: inline-block;
@@ -243,8 +213,11 @@ p.logo {
 	clear: both;
 	padding: 0;
 	margin: 0;
+	display: block;
+	font-size: 1.75vmin;
 	position: relative;
-	height: 90vh;
+	height: 100vh;
+
 }
 #consultation:after {
 	clear: both;
@@ -255,7 +228,7 @@ p.logo {
 	visibility: hidden;
 }
 #consultation p {
-	font-size: 1.4em;
+	font-size: 1.6em;
 }
 #consultation article {
 	padding: 4em;
