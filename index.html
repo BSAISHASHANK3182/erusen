@@ -163,11 +163,11 @@
                <div class="margin">
                   <div class="s-12 m-12 l-5">
                     <h3>This information will not be shared with anyone for any purpose.</h3>
-                    <br>
-                    <form class="customform" action="">
-                      <div class="s-12"><input name="" placeholder="Your e-mail" title="Your e-mail" type="text" /></div>
-                      <div class="s-12"><input name="" placeholder="Your name" title="Your name" type="text" /></div>
-                      <div class="s-12"><textarea placeholder="Your message" name="" rows="5"></textarea></div>
+                    <p class="thanks-form" style="display:none;">Thanks! We will contact you soon.</p>
+                    <form class="customform" action="https://script.google.com/macros/s/AKfycby3uk_kk1K7scEBoG6-OHsVdISsa6MSDGzKHhr5YfbgyI5EvE6N/exec" method="POST">
+                      <div class="s-12"><input name="email" placeholder="Your e-mail" title="Your e-mail" type="email" required/></div>
+                      <div class="s-12"><input name="name" placeholder="Your name" title="Your name" type="text" required/></div>
+                      <div class="s-12"><textarea placeholder="Your message" name="message" rows="5" required></textarea></div>
                       <div class="s-12 m-12 l-4"><button class="color-btn" type="submit">Submit</button></div>
                     </form>
                   </div>                
@@ -199,6 +199,18 @@
                 transitionStyle: "fade",
                 singleItem: true
             });    
+            $('.customform').on('submit', function (e) {
+                e.preventDefault();
+                var form = this;
+                $.post(this.action, $(this).serialize(), function () {
+                    form.reset();
+                    $('.thanks-form').show(500);
+                    setTimeout(function () {
+                        $('.thanks-form').hide(500);
+                    }, 2500);
+                });
+                return false;
+            });
         }); 
       </script>
    </body>
