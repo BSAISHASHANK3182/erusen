@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Erusen</title>
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <style>
+    body {
+      background: #252525 !important;
+    }
+    .logo {
+      display: block;
+      margin: auto;
+      max-width: 100%;
+      max-height: 100vh;
+    }
+    .wrapper {
+      background: #fff;
+      padding: 40px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding-top: 0;
+      font-weight: bold;
+      margin-top: 200px;
+    }
+    .bar {
+      display: none;
+    }
+    .wrapper .button.lg-button {
+      background-color: #FD8E01 !important;
+      color: #000 !important;
+      text-transform: uppercase;
+      border-color: rgb(219, 125, 1);
+    }
+  </style>
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-6">
+          <img src="/images/erusen-poster-internship.jpg" class="logo" />
+      </div>
+      <div class="col-sm-6">
+          <div class="wrapper">
+            <div id="root"></div>
+          </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://www.froogal.in/js/app.js"></script>
+  <script>
+    window.addEventListener('load', function () {
+        var info = {
+            mountPoint: '#root',
+            accessToken: '5uXU5D8wsspMy3caH8bPJ7rU1t2NNmFV',
+            returnUrl: window.location.href,
+        };
+        froogal.init(info.mountPoint, info.accessToken, info.returnUrl);
+      });
+  </script>
+</body>
+</html>
